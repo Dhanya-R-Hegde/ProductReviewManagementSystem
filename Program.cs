@@ -43,7 +43,9 @@ namespace ProductReviewManagementSystem
 
             //management.RetriveProductIDAndReview(productReviewList);
 
-            management.RetriveRecordsExceptTop5(productReviewList);
+            //management.RetriveRecordsExceptTop5(productReviewList);
+
+            management.RetriveRecordsWhereIsLikeisTrue(productReviewList);
         }
     }
 }

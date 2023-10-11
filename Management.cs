@@ -67,5 +67,18 @@ namespace ProductReviewManagementSystem
             }
 
         }
+
+        public void RetriveRecordsWhereIsLikeisTrue(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReview in listProductReview
+                                where productReview.IsLike == true
+                                select productReview);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.IsLike);
+            }
+
+        }
     }
 }
