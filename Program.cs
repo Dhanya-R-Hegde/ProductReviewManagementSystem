@@ -39,7 +39,9 @@ namespace ProductReviewManagementSystem
 
             //management.SelectedRecords(productReviewList);
 
-            management.RetrieveCountOfRecords(productReviewList);
+            //management.RetrieveCountOfRecords(productReviewList);
+
+            management.RetriveProductIDAndReview(productReviewList);
         }
     }
 }
