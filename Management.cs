@@ -80,5 +80,25 @@ namespace ProductReviewManagementSystem
             }
 
         }
+
+        public void RetriveAverageRating(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReview in listProductReview
+                                select productReview.Rating).Average();
+            Console.WriteLine("Average Rating is : " + recordedData);
+
+        }
+
+        public void RetriveRecordsWhereReviewMessageIsNice(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReview in listProductReview
+                                where productReview.Review == "Nice"
+                                select productReview);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.IsLike);
+            }
+        }
     }
 }
