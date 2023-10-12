@@ -100,5 +100,18 @@ namespace ProductReviewManagementSystem
                 Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.IsLike);
             }
         }
+
+        public void ReriveRecordsWhereUserIdIs10(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReview in listProductReview
+                                where productReview.UserID == 10
+                                orderby productReview.Rating descending
+                                select productReview);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.IsLike);
+            }
+        }
     }
 }

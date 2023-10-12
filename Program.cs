@@ -49,7 +49,9 @@ namespace ProductReviewManagementSystem
 
             //management.RetriveAverageRating(productReviewList);
 
-            management.RetriveRecordsWhereReviewMessageIsNice(productReviewList);
+            //management.RetriveRecordsWhereReviewMessageIsNice(productReviewList);
+
+            management.ReriveRecordsWhereUserIdIs10(productReviewList);
         }
     }
 }
